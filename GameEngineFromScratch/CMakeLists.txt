@@ -13,6 +13,8 @@ add_library(${GAME_ENGINE_FROM_SCRATCH} STATIC
         include/framework/Object.h
         src/framework/AssetManager.cpp
         include/framework/AssetManager.h
+        src/framework/MathUtility.cpp
+        include/framework/MathUtility.h
 )
 
 target_include_directories(${GAME_ENGINE_FROM_SCRATCH} PUBLIC

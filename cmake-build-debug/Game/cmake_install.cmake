@@ -1,4 +1,4 @@
-# Install script for directory: D:/Programming/C++/GameEngineFromScratch/GameEngineFromScratch
+# Install script for directory: D:/Programming/C++/GameEngineFromScratch/Game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

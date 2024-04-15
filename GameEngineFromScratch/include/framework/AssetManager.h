@@ -10,6 +10,7 @@ class AssetManager {
 public:
     static AssetManager& GetInstance();
     shared<sf::Texture> LoadTexture(const std::string& path);
+    void CleanCycle();
 
 protected:
     AssetManager();

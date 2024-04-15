@@ -1,12 +1,16 @@
 #include "framework/Application.h"
+#include "framework/AssetManager.h"
 
 namespace ly {
-    Application::Application(unsigned int windowWidth, unsigned windowHeight, const std::string& windowTitle, sf::Uint32 style)
+
+    Application::Application(unsigned int windowWidth, unsigned windowHeight, const std::string &windowTitle,
+                             sf::Uint32 style)
             : mWindow(sf::VideoMode(windowWidth, windowHeight), windowTitle, style),
               mTargetFrameRate(60.0f),
               mTickClock(),
-              currentWorld(nullptr) {
-    }
+              currentWorld(nullptr),
+              mCleanCycleInterval(2.f),
+              mCleanCycleCloak(){}
 
     void Application::Run() {
         mTickClock.restart();
@@ -39,6 +43,11 @@ namespace ly {
         if (currentWorld) {
             currentWorld->TickInternal(deltaTime);
         }
+
+        if (mCleanCycleCloak.getElapsedTime().asSeconds() >= 2.f) {
+            mCleanCycleCloak.restart();
+            AssetManager::GetInstance().CleanCycle();
+        }
     }
 
     void Application::Tick(float deltaTime) {
@@ -53,11 +62,9 @@ namespace ly {
 
     void Application::Render() {
 
-
-        if(currentWorld) {
+        if (currentWorld) {
             currentWorld->Render(mWindow);
         }
-
     }
 
 

@@ -49,7 +49,6 @@ namespace ly {
 
     void World::Tick(float deltaTime) {
 
-        LOG("Tick at frame rate %f", 1.f / deltaTime);
     }
 
     void World::Render(sf::RenderWindow &window) {

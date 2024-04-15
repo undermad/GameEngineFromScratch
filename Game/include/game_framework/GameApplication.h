@@ -7,9 +7,10 @@ namespace ly
 	{
     public:
         GameApplication();
+        virtual void Tick(float deltaTime) override;
 
     private:
         float counter;
-        weak<Actor> actorToDestroy;
+        weak<Actor> mActorToDestroy;
 	};
 }

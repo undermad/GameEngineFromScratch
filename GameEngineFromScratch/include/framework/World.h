@@ -20,6 +20,8 @@ namespace ly {
 
         virtual ~World();
 
+        void Render(sf::RenderWindow& window);
+
         template<typename ActorType>
         weak<ActorType> SpawnActor();
 

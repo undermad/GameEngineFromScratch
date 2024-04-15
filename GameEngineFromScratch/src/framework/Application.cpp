@@ -1,8 +1,8 @@
 #include "framework/Application.h"
 
 namespace ly {
-    Application::Application()
-            : mWindow(sf::VideoMode(1024, 1440), "Game Engine"),
+    Application::Application(unsigned int windowWidth, unsigned windowHeight, const std::string& windowTitle, sf::Uint32 style)
+            : mWindow(sf::VideoMode(windowWidth, windowHeight), windowTitle, style),
               mTargetFrameRate(60.0f),
               mTickClock(),
               currentWorld(nullptr) {
@@ -42,6 +42,7 @@ namespace ly {
     }
 
     void Application::Tick(float deltaTime) {
+
     }
 
     void Application::RenderInternal() {
@@ -51,11 +52,12 @@ namespace ly {
     }
 
     void Application::Render() {
-        sf::RectangleShape rectangleShape{sf::Vector2f{100, 100}};
-        rectangleShape.setFillColor(sf::Color::Blue);
-        rectangleShape.setOrigin(50, 50);
-        rectangleShape.setPosition(mWindow.getSize().x / 2.f, mWindow.getSize().y / 2.f);
-        mWindow.draw(rectangleShape);
+
+
+        if(currentWorld) {
+            currentWorld->Render(mWindow);
+        }
+
     }
 
 

@@ -11,6 +11,8 @@ add_library(${GAME_ENGINE_FROM_SCRATCH} STATIC
         include/framework/Actor.h
         src/framework/Object.cpp
         include/framework/Object.h
+        src/framework/AssetManager.cpp
+        include/framework/AssetManager.h
 )
 
 target_include_directories(${GAME_ENGINE_FROM_SCRATCH} PUBLIC

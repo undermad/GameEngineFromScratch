@@ -10,6 +10,8 @@ namespace ly {
               mPendingActors{} {
     }
 
+    World::~World() = default;
+
     void World::BeginPlayInternal() {
         if (!mBegunPlay) {
             mBegunPlay = true;
@@ -32,12 +34,11 @@ namespace ly {
             if(iter->get()->isPendingDestroy()) {
                 iter = mActors.erase(iter);
             } else {
-                iter->get()->Tick(deltaTime);
+                iter->get()->TickInternal(deltaTime);
                 ++iter;
             }
 
         }
-
 
         Tick(deltaTime);
     }
@@ -51,6 +52,13 @@ namespace ly {
         LOG("Tick at frame rate %f", 1.f / deltaTime);
     }
 
-    World::~World() = default;
+    void World::Render(sf::RenderWindow &window) {
+
+        for(auto& actor : mActors){
+            actor->Render(window);
+        }
+    }
+
+
 }
 

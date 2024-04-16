@@ -20,12 +20,7 @@ namespace ly {
  }
 
     void GameApplication::Tick(float deltaTime) {
-        counter += deltaTime;
-        if (counter > 2.f) {
-            if (testPlayer.expired()) {
-                testPlayer.lock()->Destroy();
-            }
-        }
+
     }
 
 

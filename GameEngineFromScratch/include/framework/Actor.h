@@ -30,7 +30,11 @@ namespace ly {
         float GetActorRotation();
         sf::Vector2f GetActorForwardDirection();
         sf::Vector2f GetActorRightDirection();
-        sf::Vector2u GetWindowSize();
+        sf::Vector2u GetWindowSize() const;
+        World* GetWorld() const { return mOwningWorld; };
+        bool IsActorOutOfWindowBounds() const;
+        sf::FloatRect GetActorGlobalBounds() const;
+
     private:
         World* mOwningWorld;
         bool mHasBeginPlay;

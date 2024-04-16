@@ -97,8 +97,26 @@ namespace ly {
         mSprite.setOrigin(bound.width / 2.f, bound.height / 2.f);
     }
 
-    sf::Vector2u Actor::GetWindowSize() {
+    sf::Vector2u Actor::GetWindowSize() const {
         return mOwningWorld->GetWindowSize();
+    }
+
+    bool Actor::IsActorOutOfWindowBounds() const {
+        float windowWidth = GetWindowSize().x;
+        float windowHeight = GetWindowSize().y;
+
+        float objectWidth = GetActorGlobalBounds().width;
+        float objectHeight = GetActorGlobalBounds().height;
+
+        sf::Vector2f actorPosition = GetActorLocation();
+
+        if(actorPosition.x < -objectWidth || actorPosition.x > (windowWidth + objectWidth)) return true;
+        if(actorPosition.y < -objectHeight || actorPosition.y > (windowHeight + objectHeight)) return true;
+        return false;
+    }
+
+    sf::FloatRect Actor::GetActorGlobalBounds() const {
+        return mSprite.getGlobalBounds();
     }
 
 

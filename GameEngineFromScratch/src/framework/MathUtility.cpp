@@ -8,18 +8,15 @@ namespace ly {
 
     sf::Vector2f RotationToVector(float rotation) {
         float radians = DegreesToRadians(rotation);
-        return sf::Vector2f(std::cos(radians), std::sin(radians));
+        return sf::Vector2f(std::sin(radians), -std::cos(radians));
     }
 
     float DegreesToRadians(float degrees) {
-        return degrees * (PI/180.f);
+        return degrees * (PI / 180.f);
     }
 
     float RadiansToDegrees(float radians) {
         return radians * (180.f / PI);
     }
 
-    float GetPI() {
-        return PI;
-    }
 }

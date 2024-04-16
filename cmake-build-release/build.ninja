@@ -1824,12 +1824,33 @@ build Game/CMakeFiles/Game.dir/src/spaceship/Spaceship.cpp.obj: CXX_COMPILER__Ga
   OBJECT_DIR = Game\CMakeFiles\Game.dir
   OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\src\spaceship
 
-build Game/CMakeFiles/Game.dir/player/PlayerSpaceship.cpp.obj: CXX_COMPILER__Game_unscanned_Release D$:/Programming/C++/GameEngineFromScratch/Game/player/PlayerSpaceship.cpp || cmake_object_order_depends_target_Game
-  DEP_FILE = Game\CMakeFiles\Game.dir\player\PlayerSpaceship.cpp.obj.d
+build Game/CMakeFiles/Game.dir/src/player/PlayerSpaceship.cpp.obj: CXX_COMPILER__Game_unscanned_Release D$:/Programming/C++/GameEngineFromScratch/Game/src/player/PlayerSpaceship.cpp || cmake_object_order_depends_target_Game
+  DEP_FILE = Game\CMakeFiles\Game.dir\src\player\PlayerSpaceship.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++17 -fdiagnostics-color=always
   INCLUDES = -ID:/Programming/C++/GameEngineFromScratch/Game/include -ID:/Programming/C++/GameEngineFromScratch/GameEngineFromScratch/include -ID:/Programming/C++/GameEngineFromScratch/cmake-build-release/_deps/sfml-src/include
   OBJECT_DIR = Game\CMakeFiles\Game.dir
-  OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\player
+  OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\src\player
+
+build Game/CMakeFiles/Game.dir/src/weapon/Shooter.cpp.obj: CXX_COMPILER__Game_unscanned_Release D$:/Programming/C++/GameEngineFromScratch/Game/src/weapon/Shooter.cpp || cmake_object_order_depends_target_Game
+  DEP_FILE = Game\CMakeFiles\Game.dir\src\weapon\Shooter.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Programming/C++/GameEngineFromScratch/Game/include -ID:/Programming/C++/GameEngineFromScratch/GameEngineFromScratch/include -ID:/Programming/C++/GameEngineFromScratch/cmake-build-release/_deps/sfml-src/include
+  OBJECT_DIR = Game\CMakeFiles\Game.dir
+  OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\src\weapon
+
+build Game/CMakeFiles/Game.dir/src/weapon/BulletShooter.cpp.obj: CXX_COMPILER__Game_unscanned_Release D$:/Programming/C++/GameEngineFromScratch/Game/src/weapon/BulletShooter.cpp || cmake_object_order_depends_target_Game
+  DEP_FILE = Game\CMakeFiles\Game.dir\src\weapon\BulletShooter.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Programming/C++/GameEngineFromScratch/Game/include -ID:/Programming/C++/GameEngineFromScratch/GameEngineFromScratch/include -ID:/Programming/C++/GameEngineFromScratch/cmake-build-release/_deps/sfml-src/include
+  OBJECT_DIR = Game\CMakeFiles\Game.dir
+  OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\src\weapon
+
+build Game/CMakeFiles/Game.dir/include/weapon/Bullet.cpp.obj: CXX_COMPILER__Game_unscanned_Release D$:/Programming/C++/GameEngineFromScratch/Game/include/weapon/Bullet.cpp || cmake_object_order_depends_target_Game
+  DEP_FILE = Game\CMakeFiles\Game.dir\include\weapon\Bullet.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Programming/C++/GameEngineFromScratch/Game/include -ID:/Programming/C++/GameEngineFromScratch/GameEngineFromScratch/include -ID:/Programming/C++/GameEngineFromScratch/cmake-build-release/_deps/sfml-src/include
+  OBJECT_DIR = Game\CMakeFiles\Game.dir
+  OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\include\weapon
 
 
 # =============================================================================
@@ -1839,7 +1860,7 @@ build Game/CMakeFiles/Game.dir/player/PlayerSpaceship.cpp.obj: CXX_COMPILER__Gam
 #############################################
 # Link the executable Game\Game.exe
 
-build Game/Game.exe: CXX_EXECUTABLE_LINKER__Game_Release Game/CMakeFiles/Game.dir/src/game_framework/GameApplication.cpp.obj Game/CMakeFiles/Game.dir/src/spaceship/Spaceship.cpp.obj Game/CMakeFiles/Game.dir/player/PlayerSpaceship.cpp.obj | GameEngineFromScratch/libGameEngineFromScratch.a _deps/sfml-build/lib/libsfml-graphics.a _deps/sfml-build/lib/libsfml-window.a _deps/sfml-build/lib/libsfml-audio.a _deps/sfml-build/lib/libsfml-system.a || GameEngineFromScratch/libGameEngineFromScratch.a _deps/sfml-build/lib/sfml-audio-2.dll _deps/sfml-build/lib/sfml-graphics-2.dll _deps/sfml-build/lib/sfml-system-2.dll _deps/sfml-build/lib/sfml-window-2.dll
+build Game/Game.exe: CXX_EXECUTABLE_LINKER__Game_Release Game/CMakeFiles/Game.dir/src/game_framework/GameApplication.cpp.obj Game/CMakeFiles/Game.dir/src/spaceship/Spaceship.cpp.obj Game/CMakeFiles/Game.dir/src/player/PlayerSpaceship.cpp.obj Game/CMakeFiles/Game.dir/src/weapon/Shooter.cpp.obj Game/CMakeFiles/Game.dir/src/weapon/BulletShooter.cpp.obj Game/CMakeFiles/Game.dir/include/weapon/Bullet.cpp.obj | GameEngineFromScratch/libGameEngineFromScratch.a _deps/sfml-build/lib/libsfml-graphics.a _deps/sfml-build/lib/libsfml-window.a _deps/sfml-build/lib/libsfml-audio.a _deps/sfml-build/lib/libsfml-system.a || GameEngineFromScratch/libGameEngineFromScratch.a _deps/sfml-build/lib/sfml-audio-2.dll _deps/sfml-build/lib/sfml-graphics-2.dll _deps/sfml-build/lib/sfml-system-2.dll _deps/sfml-build/lib/sfml-window-2.dll
   FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = GameEngineFromScratch/libGameEngineFromScratch.a  _deps/sfml-build/lib/libsfml-graphics.a  _deps/sfml-build/lib/libsfml-window.a  _deps/sfml-build/lib/libsfml-audio.a  _deps/sfml-build/lib/libsfml-system.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = Game\CMakeFiles\Game.dir

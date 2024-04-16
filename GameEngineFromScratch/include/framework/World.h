@@ -21,8 +21,10 @@ namespace ly {
 
         sf::Vector2u GetWindowSize();
 
-        template<typename ActorType>
-        weak<ActorType> SpawnActor();
+        template<typename ActorType, typename... Args>
+        weak<ActorType> SpawnActor(Args... args);
+
+        void CleanCycle();
 
 
     private:
@@ -36,9 +38,9 @@ namespace ly {
     };
 
 
-    template<typename ActorType>
-    weak<ActorType> World::SpawnActor() {
-        shared<ActorType> newActor{new ActorType{this}};
+    template<typename ActorType, typename... Args>
+    weak<ActorType> World::SpawnActor(Args... args) {
+        shared<ActorType> newActor{new ActorType{this, args...}};
         mPendingActors.push_back(newActor);
         return newActor;
     }

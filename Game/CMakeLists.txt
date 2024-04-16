@@ -3,8 +3,14 @@ add_executable(${GAME}
         ${CMAKE_CURRENT_SOURCE_DIR}/src/game_framework/GameApplication.cpp
         src/spaceship/Spaceship.cpp
         include/spaceship/Spaceship.h
-        player/PlayerSpaceship.cpp
-        player/PlayerSpaceship.h
+        src/player/PlayerSpaceship.cpp
+        include/player/PlayerSpaceship.h
+        src/weapon/Shooter.cpp
+        include/weapon/Shooter.h
+        src/weapon/BulletShooter.cpp
+        include/weapon/BulletShooter.h
+        src/weapon/Bullet.cpp
+        include/weapon/Bullet.h
 )
 
 target_include_directories(${GAME} PUBLIC

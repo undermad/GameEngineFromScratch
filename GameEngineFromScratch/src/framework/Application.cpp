@@ -47,6 +47,13 @@ namespace ly {
         if (mCleanCycleCloak.getElapsedTime().asSeconds() >= 2.f) {
             mCleanCycleCloak.restart();
             AssetManager::GetInstance().CleanCycle();
+
+            if(currentWorld) {
+                currentWorld->CleanCycle();
+
+            }
+
+
         }
     }
 

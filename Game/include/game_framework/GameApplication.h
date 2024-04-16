@@ -1,6 +1,6 @@
 #pragma once
 #include <framework/Application.h>
-#include "../../player/PlayerSpaceship.h"
+#include "player/PlayerSpaceship.h"
 
 namespace ly
 {

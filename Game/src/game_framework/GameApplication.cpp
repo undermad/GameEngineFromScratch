@@ -1,6 +1,5 @@
 #include "game_framework/GameApplication.h"
 #include "config.h"
-#include "spaceship/Spaceship.h"
 #include "framework/AssetManager.h."
 
 ly::Application *GetApplication() {

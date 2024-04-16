@@ -175,3 +175,10 @@
 13	592	7349871121473308	GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Actor.cpp.obj	1548e62cd6328611
 592	720	7349871122168336	GameEngineFromScratch/libGameEngineFromScratch.a	4b90cba1b4c121ff
 720	1435	7349871123893458	Game/Game.exe	f6bf5adf7d67738b
+9	702	7349976480140271	Game/CMakeFiles/Game.dir/src/game_framework/GameApplication.cpp.obj	2996f82f8597f0ae
+6	786	7349976480985361	Game/CMakeFiles/Game.dir/src/player/PlayerSpaceship.cpp.obj	9d8418ded42a5dbf
+786	2334	7349976483535665	Game/Game.exe	f6bf5adf7d67738b
+5	624	7349977432761320	Game/CMakeFiles/Game.dir/src/player/PlayerSpaceship.cpp.obj	9d8418ded42a5dbf
+624	1358	7349977433996432	Game/Game.exe	f6bf5adf7d67738b
+5	543	7349979852890001	Game/CMakeFiles/Game.dir/src/player/PlayerSpaceship.cpp.obj	9d8418ded42a5dbf
+543	1231	7349979854120212	Game/Game.exe	f6bf5adf7d67738b

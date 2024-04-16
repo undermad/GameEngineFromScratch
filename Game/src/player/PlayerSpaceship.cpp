@@ -63,18 +63,18 @@ namespace ly {
     }
 
     void PlayerSpaceship::ClampInputOnEdge() {
-        sf::Vector2f actorLocation = GetActorLocation();
-        if (actorLocation.x < 0 && mMoveInput.x == -1) {
-            mMoveInput.x = 0.f;
-        }
-        if (actorLocation.x > GetWindowSize().x && mMoveInput.x == 1) {
-            mMoveInput.x = 0.f;
-        }
-        if (actorLocation.y < 0 && mMoveInput.y == -1) {
-            mMoveInput.y = 0.f;
-        }
-        if (actorLocation.y > GetWindowSize().y && mMoveInput.y == 1) {
-            mMoveInput.y = 0.f;
+        if(IsActorOutOfWindowBounds()) {
+            if(GetActorLocation().x > GetWindowSize().x) {
+                SetActorLocation(sf::Vector2f(0, GetActorLocation().y));
+            } else if(GetActorLocation().x < 0) {
+                SetActorLocation(sf::Vector2f(GetWindowSize().x, GetActorLocation().y));
+            }
+
+            if(GetActorLocation().y > GetWindowSize().y) {
+                SetActorLocation(sf::Vector2f(GetActorLocation().x, 0));
+            } else if(GetActorLocation().y < 0){
+                SetActorLocation(sf::Vector2f(GetActorLocation().x, GetWindowSize().y));
+            }
         }
 
     }

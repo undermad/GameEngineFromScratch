@@ -18,4 +18,8 @@ namespace ly {
     float RadiansToDegrees(float radians) {
         return radians * (180.f / PI);
     }
+
+    float GetPI() {
+        return PI;
+    }
 }

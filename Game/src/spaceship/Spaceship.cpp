@@ -1,4 +1,6 @@
 #include "spaceship/Spaceship.h"
+#include "framework/MathUtility.h"
+#include <cmath>
 
 
 namespace ly {
@@ -11,12 +13,20 @@ namespace ly {
 
     void Spaceship::Tick(float deltaTime) {
         Actor::Tick(deltaTime);
-        AddActorLocationOffset(GetVelocity() * deltaTime);
-
+        AddActorLocationOffset(mAccelerationVelocity * deltaTime);
+        AddActorRotationOffest(mRotationVelocity * deltaTime);
     }
 
     void Spaceship::SetVelocity(const sf::Vector2f &newVelocity) {
         mVelocity = newVelocity;
+    }
+
+    void Spaceship::SetRotationVelocity(float newVelocity) {
+        mRotationVelocity = newVelocity;
+    }
+
+    void Spaceship::SetAccelerationVelocity(const sf::Vector2f& newVelocity) {
+        mAccelerationVelocity = newVelocity;
     }
 
 }

@@ -9,6 +9,7 @@ namespace ly {
     sf::Vector2f RotationToVector(float rotation);
     float DegreesToRadians(float degrees);
     float RadiansToDegrees(float radians);
+    float GetPI();
 
     template<typename T>
     float GetVectorLength(const sf::Vector2<T>& vector) {

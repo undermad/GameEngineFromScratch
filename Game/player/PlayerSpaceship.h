@@ -16,10 +16,18 @@ namespace ly {
         float getSpeed() { return mSpeed; };
     private:
         sf::Vector2f mMoveInput;
+        float mSpeed;
+
+        sf::Vector2f mAccelerateValue;
+        float mAccleerateSpeed;
+
+        float mRotationSpeed;
+
+        void Accelerate();
         void NormalizeInput();
         void ClampInputOnEdge();
-        float mSpeed;
         void ConsumeInput(float deltaTime);
+        void CleanInput();
 
     };
 }

@@ -16,7 +16,7 @@ namespace ly {
         weak<World> newWorld = LoadWorld<World>();
 
         testPlayer = newWorld.lock()->SpawnActor<PlayerSpaceship>();
-        testPlayer.lock()->SetActorLocation(sf::Vector2f(1, 1));
+        testPlayer.lock()->SetActorLocation(sf::Vector2f(500, 500));
  }
 
     void GameApplication::Tick(float deltaTime) {

@@ -6,43 +6,49 @@ namespace ly {
 
     PlayerSpaceship::PlayerSpaceship(World *owningWorld, const std::string &path)
             : Spaceship(owningWorld, path),
-            mMoveInput(),
-            mSpeed(600) {
+              mMoveInput(),
+              mSpeed(600),
+              mRotationSpeed(0),
+              mAccleerateSpeed(500){
 
     }
 
     void PlayerSpaceship::Tick(float deltaTime) {
         Spaceship::Tick(deltaTime);
         HandleInput();
+        ClampInputOnEdge();
+        NormalizeInput();
         ConsumeInput(deltaTime);
+        CleanInput();
     }
 
     void PlayerSpaceship::HandleInput() {
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-            mMoveInput.y = -1.f;
-        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+            Accelerate();
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
             mMoveInput.y = 1.f;
         }
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-            mMoveInput.x = -1.f;
-        } else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
-            mMoveInput.x = 1.f;
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+            mRotationSpeed = -1.f;
+        } else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
+            mRotationSpeed = 1.f;
         }
-
-
-        ClampInputOnEdge();
-        NormalizeInput();
     }
 
     void PlayerSpaceship::ConsumeInput(float deltaTime) {
         SetVelocity(mMoveInput * mSpeed);
+        SetRotationVelocity(mRotationSpeed * mSpeed);
+        SetAccelerationVelocity(mAccelerateValue);
+    }
+
+    void PlayerSpaceship::CleanInput() {
         mMoveInput.x = mMoveInput.y = 0.f;
+        mRotationSpeed = 0;
     }
 
     void PlayerSpaceship::NormalizeInput() {
         Normalize(mMoveInput);
-//        LOG("Move input x: %f, y: %f", mMoveInput.x, mMoveInput.y );
     }
 
     void PlayerSpaceship::ClampInputOnEdge() {
@@ -61,7 +67,18 @@ namespace ly {
         }
 
         LOG("X: %f, Y: %f", GetActorLocation().x, GetActorLocation().y);
-
+        LOG("Angle: %f", GetActorRotation());
 
     }
+
+    void PlayerSpaceship::Accelerate() {
+
+        LOG("X: %f, Y: %f", mAccelerateValue.x, mAccelerateValue.y);
+        mAccelerateValue = sf::Vector2f(
+                sin(GetActorRotation() * GetPI() / 180) * mAccleerateSpeed,
+                -cos(GetActorRotation() * GetPI() / 180) * mAccleerateSpeed);
+    }
+
+
+
 }

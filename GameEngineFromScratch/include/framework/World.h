@@ -12,28 +12,27 @@ namespace ly {
     class World {
 
     public:
-        explicit World(Application *owningApp);
-
-        void BeginPlayInternal();
-
-        void TickInternal(float deltaTime);
-
+        World(Application* owningApp);
         virtual ~World();
 
+        void BeginPlayInternal();
+        void TickInternal(float deltaTime);
         void Render(sf::RenderWindow& window);
+
+        sf::Vector2u GetWindowSize();
 
         template<typename ActorType>
         weak<ActorType> SpawnActor();
 
+
     private:
-        void BeginPlay();
-
-        void Tick(float deltaTime);
-
-        Application *mOwningApp;
-        bool mBegunPlay{};
+        Application* mOwningApp;
         List<shared<Actor>> mActors;
         List<shared<Actor>> mPendingActors;
+
+        void BeginPlay();
+        void Tick(float deltaTime);
+        bool mBegunPlay{};
     };
 
 

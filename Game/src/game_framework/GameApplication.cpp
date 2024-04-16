@@ -1,5 +1,7 @@
 #include "game_framework/GameApplication.h"
 #include "config.h"
+#include "spaceship/Spaceship.h"
+#include "framework/AssetManager.h."
 
 ly::Application *GetApplication() {
     return new ly::GameApplication{};
@@ -10,19 +12,18 @@ namespace ly {
     GameApplication::GameApplication()
             : Application{1280, 1024, "Game Engine", sf::Style::Titlebar | sf::Style::Close} {
 
+        AssetManager::GetInstance().SetAssetRootDir(GetResourceDir());
         weak<World> newWorld = LoadWorld<World>();
 
-        mActorToDestroy = newWorld.lock()->SpawnActor<Actor>();
-        mActorToDestroy.lock()->SetTexture(GetResourceDir() + "SpaceShooterRedux/PNG/playerShip1_blue.png");
-        mActorToDestroy.lock()->SetActorLocation(sf::Vector2f(300, 200));
-        mActorToDestroy.lock()->SetActorRotation(90.f);
-    }
+        testPlayer = newWorld.lock()->SpawnActor<PlayerSpaceship>();
+        testPlayer.lock()->SetActorLocation(sf::Vector2f(1, 1));
+ }
 
     void GameApplication::Tick(float deltaTime) {
         counter += deltaTime;
         if (counter > 2.f) {
-            if (mActorToDestroy.expired()) {
-                mActorToDestroy.lock()->Destroy();
+            if (testPlayer.expired()) {
+                testPlayer.lock()->Destroy();
             }
         }
     }

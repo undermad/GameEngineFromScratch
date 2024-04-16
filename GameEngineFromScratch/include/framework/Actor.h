@@ -5,6 +5,7 @@
 #include "Core.h"
 #include <SFML/Graphics.hpp>
 
+
 namespace ly {
 
     class World;
@@ -12,7 +13,7 @@ namespace ly {
     class Actor : public Object {
 
     public:
-        explicit Actor(World *owningWorld, const std::string& texturePath = "");
+        explicit Actor(World* owningWorld, const std::string& texturePath = "");
         ~Actor();
 
         void SetTexture(const std::string& texturePath);
@@ -29,8 +30,9 @@ namespace ly {
         float GetActorRotation();
         sf::Vector2f GetActorForwardDirection();
         sf::Vector2f GetActorRightDirection();
+        sf::Vector2u GetWindowSize();
     private:
-        World *owningWorld;
+        World* mOwningWorld;
         bool mHasBeginPlay;
         void CenterPivot();
 

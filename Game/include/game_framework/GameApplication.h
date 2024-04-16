@@ -1,5 +1,6 @@
 #pragma once
 #include <framework/Application.h>
+#include "../../player/PlayerSpaceship.h"
 
 namespace ly
 {
@@ -11,6 +12,6 @@ namespace ly
 
     private:
         float counter;
-        weak<Actor> mActorToDestroy;
+        weak<PlayerSpaceship> testPlayer;
 	};
 }

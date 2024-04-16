@@ -11,13 +11,14 @@ public:
     static AssetManager& GetInstance();
     shared<sf::Texture> LoadTexture(const std::string& path);
     void CleanCycle();
-
+    void SetAssetRootDir(const std::string& directory);
 protected:
     AssetManager();
 
 private:
     static unique<AssetManager> mAssetManager;
     Dictionary<std::string, shared<sf::Texture>> mLoadedTextureMap;
+    std::string mRootDirectory;
 };
 
 }

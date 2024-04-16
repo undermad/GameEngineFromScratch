@@ -80,7 +80,6 @@ namespace ly {
     }
 
     void PlayerSpaceship::Accelerate() {
-        LOG("X: %f, Y: %f", mAccelerateValue.x, mAccelerateValue.y);
         mAccelerateValue = RotationToVector(GetActorRotation()) * mAccleerateSpeed;
     }
 

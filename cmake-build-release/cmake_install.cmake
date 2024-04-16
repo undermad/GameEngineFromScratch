@@ -39,11 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Programming/C++/GameEngineFromScratch/cmake-build-release/_deps/sfml-build/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("D:/Programming/C++/GameEngineFromScratch/cmake-build-release/GameEngineFromScratch/cmake_install.cmake")
 endif()
 

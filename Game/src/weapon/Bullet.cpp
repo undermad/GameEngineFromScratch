@@ -19,3 +19,9 @@ void ly::Bullet::Tick(float deltaTime) {
 void ly::Bullet::Move(float deltaTime) {
     AddActorLocationOffset(GetActorForwardDirection() * mSpeed * deltaTime);
 }
+
+void ly::Bullet::BeginPlay() {
+    Actor::BeginPlay();
+
+    SetEnablePhysics(true);
+}

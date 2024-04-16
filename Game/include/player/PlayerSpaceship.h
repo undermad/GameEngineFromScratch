@@ -20,6 +20,8 @@ namespace ly {
 
         void Shoot() override;
 
+
+
     private:
         sf::Vector2f mMoveInput;
         float mSpeed;

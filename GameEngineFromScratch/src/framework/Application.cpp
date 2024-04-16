@@ -1,5 +1,6 @@
 #include "framework/Application.h"
 #include "framework/AssetManager.h"
+#include "framework/Physics.h"
 
 namespace ly {
 
@@ -44,6 +45,9 @@ namespace ly {
             currentWorld->TickInternal(deltaTime);
         }
 
+        Physics::Get().Step(deltaTime);
+
+
         if (mCleanCycleCloak.getElapsedTime().asSeconds() >= 2.f) {
             mCleanCycleCloak.restart();
             AssetManager::GetInstance().CleanCycle();
@@ -52,9 +56,9 @@ namespace ly {
                 currentWorld->CleanCycle();
 
             }
-
-
         }
+
+
     }
 
     void Application::Tick(float deltaTime) {

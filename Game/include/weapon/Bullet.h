@@ -15,6 +15,8 @@ namespace ly {
 
         void Tick(float deltaTime) override;
 
+        void BeginPlay() override;
+
     private:
         Actor* mOwner;
         float mSpeed;

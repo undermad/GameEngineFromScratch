@@ -3,6 +3,7 @@
 #include "framework/AssetManager.h"
 #include "framework/MathUtility.h"
 #include "framework/World.h"
+#include "framework/Physics.h"
 
 namespace ly {
 
@@ -10,7 +11,9 @@ namespace ly {
             : mOwningWorld(owningWorld),
               mHasBeginPlay(false),
               mSprite(),
-              mTexture() {
+              mTexture(),
+              mPhysicBody(nullptr),
+              mPhysicsEnabled(false){
         SetTexture(texturePath);
     }
 
@@ -30,7 +33,7 @@ namespace ly {
     }
 
     void Actor::TickInternal(float deltaTime) {
-        if (!isPendingDestroy()) {
+        if (!IsPendingDestroy()) {
             Tick(deltaTime);
         }
     }
@@ -54,7 +57,7 @@ namespace ly {
 
     void Actor::Render(sf::RenderWindow &window) {
 
-        if (isPendingDestroy())
+        if (IsPendingDestroy())
             return;
 
         window.draw(mSprite);
@@ -62,6 +65,7 @@ namespace ly {
 
     void Actor::SetActorLocation(const sf::Vector2f &newLocation) {
         mSprite.setPosition(newLocation);
+        UpdatePhysicBodyTransform();
     }
 
     void Actor::SetActorRotation(float newRotation) {
@@ -110,8 +114,8 @@ namespace ly {
 
         sf::Vector2f actorPosition = GetActorLocation();
 
-        if(actorPosition.x < -objectWidth || actorPosition.x > (windowWidth + objectWidth)) return true;
-        if(actorPosition.y < -objectHeight || actorPosition.y > (windowHeight + objectHeight)) return true;
+        if (actorPosition.x<-objectWidth || actorPosition.x>(windowWidth + objectWidth)) return true;
+        if (actorPosition.y<-objectHeight || actorPosition.y>(windowHeight + objectHeight)) return true;
         return false;
     }
 
@@ -119,5 +123,51 @@ namespace ly {
         return mSprite.getGlobalBounds();
     }
 
+    void Actor::SetEnablePhysics(bool enable) {
+        mPhysicsEnabled = enable;
+        if (mPhysicsEnabled) {
+            InitializePhysics();
+        } else {
+            UnInitializePhysics();
+        }
+
+    }
+
+    void Actor::InitializePhysics() {
+        if (!mPhysicBody) {
+            mPhysicBody = Physics::Get().AddListener(this);
+        }
+    }
+
+    void Actor::UnInitializePhysics() {
+        if (mPhysicBody) {
+            Physics::Get().RemoveListener(mPhysicBody);
+            mPhysicBody = nullptr;
+        }
+    }
+
+    void Actor::UpdatePhysicBodyTransform() {
+        if (mPhysicBody) {
+            float physicsScale = Physics::Get().GetPhysicScale();
+            b2Vec2 position{GetActorLocation().x * physicsScale, GetActorLocation().y * physicsScale};
+            float rotation = DegreesToRadians(GetActorRotation());
+
+            mPhysicBody->SetTransform(position, rotation);
+        }
+    }
+
+    void Actor::OnActionBeginOverlap(Actor *other) {
+
+        LOG("Overlap");
+    }
+
+    void Actor::OnActionEndOverlap(Actor *other) {
+        LOG("Overlap finish");
+    }
+
+    void Actor::Destroy() {
+        UnInitializePhysics();
+        Object::Destroy();
+    }
 
 }

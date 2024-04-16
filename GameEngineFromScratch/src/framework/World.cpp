@@ -59,7 +59,7 @@ namespace ly {
     void World::CleanCycle() {
 
         for (auto iter = mActors.begin(); iter != mActors.end();) {
-            if(iter->get()->isPendingDestroy()) {
+            if(iter->get()->IsPendingDestroy()) {
                 iter = mActors.erase(iter);
             } else {
                 ++iter;

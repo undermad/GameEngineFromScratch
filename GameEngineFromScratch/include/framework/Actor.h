@@ -56,16 +56,26 @@ namespace ly {
 
         sf::FloatRect GetActorGlobalBounds() const;
 
+        static uint8 GetNeturalTeamId() {return neturailTeamId; };
+
         void SetEnablePhysics(bool enable);
 
+        void SetTeamId(uint8 teamId) { mTeamId = teamId; };
+
+        virtual void ApplayDamage(float amount);
         virtual void OnActionBeginOverlap(Actor* other);
         virtual void OnActionEndOverlap(Actor* other);
+
+        uint8 GetTeamId() const { return mTeamId; };
+        bool IsOtherHostile(Actor* other) const;
 
         void Destroy() override;
 
     private:
         World *mOwningWorld;
         bool mHasBeginPlay;
+
+        uint8 mTeamId;
 
         void CenterPivot();
 
@@ -80,6 +90,8 @@ namespace ly {
         b2Body *mPhysicBody;
 
         bool mPhysicsEnabled;
+
+        const static uint8 neturailTeamId = 255;
     };
 
 }

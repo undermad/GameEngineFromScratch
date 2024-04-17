@@ -13,6 +13,7 @@ namespace ly {
               mRotationValue(0),
               mRotationSpeed(400),
               mBulletShooter(new BulletShooter(this, 0.3f)) {
+        SetTeamId(1);
     }
 
     void PlayerSpaceship::Tick(float deltaTime) {

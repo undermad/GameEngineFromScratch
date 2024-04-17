@@ -2,6 +2,7 @@
 
 
 #include "framework/Actor.h"
+#include "gameplay/HealthComponent.h"
 
 namespace ly {
 
@@ -23,6 +24,8 @@ namespace ly {
 
         sf::Vector2f GetAccelerationVelocity() const { return mAccelerationVelocity; };
 
+        void ApplayDamage(float amount) override;
+
         virtual void Shoot();
 
         void BeginPlay() override;
@@ -31,6 +34,10 @@ namespace ly {
         sf::Vector2f mVelocity;
         float mRotationVelocity;
         sf::Vector2f mAccelerationVelocity;
+        HealthComponent mHealthComponent;
+        virtual void OnHealthChange(float amount, float health, float maxHealth);
+        virtual void OnTakenDamage(float amount, float health, float maxHealth);
+        virtual void Blow();
     };
 
 }

@@ -30,6 +30,8 @@ namespace ly {
     template<typename keyType, typename valueType, typename Hasher = std::hash<keyType>>
     using Dictionary = std::unordered_map<keyType, valueType, Hasher>;
 
+    using uint8 = unsigned char;
+
 
     //macro
 #define LOG(M, ...) printf(M "\n", ##__VA_ARGS__)

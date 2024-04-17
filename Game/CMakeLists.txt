@@ -11,6 +11,8 @@ add_executable(${GAME}
         include/weapon/BulletShooter.h
         src/weapon/Bullet.cpp
         include/weapon/Bullet.h
+        src/gameplay/HealthComponent.cpp
+        include/gameplay/HealthComponent.h
 )
 
 target_include_directories(${GAME} PUBLIC

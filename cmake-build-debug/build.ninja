@@ -191,6 +191,14 @@ build GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/P
   OBJECT_DIR = GameEngineFromScratch\CMakeFiles\GameEngineFromScratch.dir
   OBJECT_FILE_DIR = GameEngineFromScratch\CMakeFiles\GameEngineFromScratch.dir\src\framework
 
+build GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Delegate.cpp.obj: CXX_COMPILER__GameEngineFromScratch_unscanned_Debug D$:/Programming/C++/GameEngineFromScratch/GameEngineFromScratch/src/framework/Delegate.cpp || cmake_object_order_depends_target_GameEngineFromScratch
+  DEFINES = -DB2_SHARED
+  DEP_FILE = GameEngineFromScratch\CMakeFiles\GameEngineFromScratch.dir\src\framework\Delegate.cpp.obj.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Programming/C++/GameEngineFromScratch/GameEngineFromScratch/include -ID:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-src/include -ID:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/box2d-src/src/../include
+  OBJECT_DIR = GameEngineFromScratch\CMakeFiles\GameEngineFromScratch.dir
+  OBJECT_FILE_DIR = GameEngineFromScratch\CMakeFiles\GameEngineFromScratch.dir\src\framework
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target GameEngineFromScratch
@@ -199,7 +207,7 @@ build GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/P
 #############################################
 # Link the static library GameEngineFromScratch\libGameEngineFromScratch.a
 
-build GameEngineFromScratch/libGameEngineFromScratch.a: CXX_STATIC_LIBRARY_LINKER__GameEngineFromScratch_Debug GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Application.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/EntryPoint.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Core.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/World.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Actor.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Object.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/AssetManager.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/MathUtility.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Physics.cpp.obj || _deps/box2d-build/bin/libbox2d.dll _deps/sfml-build/lib/sfml-audio-d-2.dll _deps/sfml-build/lib/sfml-graphics-d-2.dll _deps/sfml-build/lib/sfml-system-d-2.dll _deps/sfml-build/lib/sfml-window-d-2.dll
+build GameEngineFromScratch/libGameEngineFromScratch.a: CXX_STATIC_LIBRARY_LINKER__GameEngineFromScratch_Debug GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Application.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/EntryPoint.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Core.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/World.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Actor.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Object.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/AssetManager.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/MathUtility.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Physics.cpp.obj GameEngineFromScratch/CMakeFiles/GameEngineFromScratch.dir/src/framework/Delegate.cpp.obj || _deps/box2d-build/bin/libbox2d.dll _deps/sfml-build/lib/sfml-audio-d-2.dll _deps/sfml-build/lib/sfml-graphics-d-2.dll _deps/sfml-build/lib/sfml-system-d-2.dll _deps/sfml-build/lib/sfml-window-d-2.dll
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = GameEngineFromScratch\CMakeFiles\GameEngineFromScratch.dir
   POST_BUILD = cmd.exe /C "cd /D D:\Programming\C++\GameEngineFromScratch\cmake-build-debug\GameEngineFromScratch && "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E copy_if_different D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-build/lib/sfml-graphics-d-2.dll D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/GameEngineFromScratch && cd /D D:\Programming\C++\GameEngineFromScratch\cmake-build-debug\GameEngineFromScratch && "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E copy_if_different D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-build/lib/sfml-window-d-2.dll D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/GameEngineFromScratch && cd /D D:\Programming\C++\GameEngineFromScratch\cmake-build-debug\GameEngineFromScratch && "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E copy_if_different D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-build/lib/sfml-system-d-2.dll D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/GameEngineFromScratch && cd /D D:\Programming\C++\GameEngineFromScratch\cmake-build-debug\GameEngineFromScratch && "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E copy_if_different D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-build/lib/sfml-audio-d-2.dll D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/GameEngineFromScratch && cd /D D:\Programming\C++\GameEngineFromScratch\cmake-build-debug\GameEngineFromScratch && "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E copy_if_different D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/box2d-build/bin/libbox2d.dll D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/GameEngineFromScratch"
@@ -3675,6 +3683,14 @@ build Game/CMakeFiles/Game.dir/src/weapon/Bullet.cpp.obj: CXX_COMPILER__Game_uns
   OBJECT_DIR = Game\CMakeFiles\Game.dir
   OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\src\weapon
 
+build Game/CMakeFiles/Game.dir/src/gameplay/HealthComponent.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:/Programming/C++/GameEngineFromScratch/Game/src/gameplay/HealthComponent.cpp || cmake_object_order_depends_target_Game
+  DEFINES = -DB2_SHARED
+  DEP_FILE = Game\CMakeFiles\Game.dir\src\gameplay\HealthComponent.cpp.obj.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Programming/C++/GameEngineFromScratch/Game/include -ID:/Programming/C++/GameEngineFromScratch/GameEngineFromScratch/include -ID:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-src/include -ID:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/box2d-src/src/../include
+  OBJECT_DIR = Game\CMakeFiles\Game.dir
+  OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\src\gameplay
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Game
@@ -3683,7 +3699,7 @@ build Game/CMakeFiles/Game.dir/src/weapon/Bullet.cpp.obj: CXX_COMPILER__Game_uns
 #############################################
 # Link the executable Game\Game.exe
 
-build Game/Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug Game/CMakeFiles/Game.dir/src/game_framework/GameApplication.cpp.obj Game/CMakeFiles/Game.dir/src/spaceship/Spaceship.cpp.obj Game/CMakeFiles/Game.dir/src/player/PlayerSpaceship.cpp.obj Game/CMakeFiles/Game.dir/src/weapon/Shooter.cpp.obj Game/CMakeFiles/Game.dir/src/weapon/BulletShooter.cpp.obj Game/CMakeFiles/Game.dir/src/weapon/Bullet.cpp.obj | GameEngineFromScratch/libGameEngineFromScratch.a _deps/sfml-build/lib/libsfml-graphics-d.a _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-audio-d.a _deps/sfml-build/lib/libsfml-system-d.a _deps/box2d-build/bin/libbox2d.dll.a || GameEngineFromScratch/libGameEngineFromScratch.a _deps/box2d-build/bin/libbox2d.dll _deps/sfml-build/lib/sfml-audio-d-2.dll _deps/sfml-build/lib/sfml-graphics-d-2.dll _deps/sfml-build/lib/sfml-system-d-2.dll _deps/sfml-build/lib/sfml-window-d-2.dll
+build Game/Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug Game/CMakeFiles/Game.dir/src/game_framework/GameApplication.cpp.obj Game/CMakeFiles/Game.dir/src/spaceship/Spaceship.cpp.obj Game/CMakeFiles/Game.dir/src/player/PlayerSpaceship.cpp.obj Game/CMakeFiles/Game.dir/src/weapon/Shooter.cpp.obj Game/CMakeFiles/Game.dir/src/weapon/BulletShooter.cpp.obj Game/CMakeFiles/Game.dir/src/weapon/Bullet.cpp.obj Game/CMakeFiles/Game.dir/src/gameplay/HealthComponent.cpp.obj | GameEngineFromScratch/libGameEngineFromScratch.a _deps/sfml-build/lib/libsfml-graphics-d.a _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-audio-d.a _deps/sfml-build/lib/libsfml-system-d.a _deps/box2d-build/bin/libbox2d.dll.a || GameEngineFromScratch/libGameEngineFromScratch.a _deps/box2d-build/bin/libbox2d.dll _deps/sfml-build/lib/sfml-audio-d-2.dll _deps/sfml-build/lib/sfml-graphics-d-2.dll _deps/sfml-build/lib/sfml-system-d-2.dll _deps/sfml-build/lib/sfml-window-d-2.dll
   FLAGS = -g
   LINK_LIBRARIES = GameEngineFromScratch/libGameEngineFromScratch.a  _deps/sfml-build/lib/libsfml-graphics-d.a  _deps/sfml-build/lib/libsfml-window-d.a  _deps/sfml-build/lib/libsfml-audio-d.a  _deps/sfml-build/lib/libsfml-system-d.a  _deps/box2d-build/bin/libbox2d.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = Game\CMakeFiles\Game.dir

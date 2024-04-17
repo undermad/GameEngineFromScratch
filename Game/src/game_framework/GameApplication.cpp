@@ -20,6 +20,7 @@ namespace ly {
         weak<Spaceship> testCollisionSpaceship = newWorld.lock()->SpawnActor<Spaceship>();
         testCollisionSpaceship.lock()->SetTexture("SpaceShooterRedux/PNG/playerShip1_blue.png");
         testCollisionSpaceship.lock()->SetActorLocation(sf::Vector2f(100,100));
+        testCollisionSpaceship.lock()->SetTeamId(1);
 
  }
 

@@ -78,7 +78,6 @@ namespace ly {
     }
 
     void PhysicsContactListener::BeginContact(b2Contact *contact) {
-        LOG("Begin Contact");
         Actor *ActorA = reinterpret_cast<Actor *>(contact->GetFixtureA()->GetBody()->GetUserData().pointer);
         Actor *ActorB = reinterpret_cast<Actor *>(contact->GetFixtureB()->GetBody()->GetUserData().pointer);
 

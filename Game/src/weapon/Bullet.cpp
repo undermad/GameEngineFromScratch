@@ -4,7 +4,7 @@ ly::Bullet::Bullet(ly::World *owningWorld, ly::Actor *owner, const std::string &
         : Actor(owningWorld, texturePath),
           mSpeed(speed),
           mDamage(damage) {
-
+    SetTeamId(owner->GetTeamId());
 }
 
 void ly::Bullet::Tick(float deltaTime) {
@@ -24,4 +24,11 @@ void ly::Bullet::BeginPlay() {
     Actor::BeginPlay();
 
     SetEnablePhysics(true);
+}
+
+void ly::Bullet::OnActionBeginOverlap(Actor *other) {
+    if(IsOtherHostile(other)) {
+        other->ApplayDamage(GetDamage());
+        Destroy();
+    }
 }

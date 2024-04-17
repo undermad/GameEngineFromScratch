@@ -13,12 +13,13 @@ namespace ly {
               mSprite(),
               mTexture(),
               mPhysicBody(nullptr),
-              mPhysicsEnabled(false){
+              mPhysicsEnabled(false),
+              mTeamId(GetNeturalTeamId())
+              {
         SetTexture(texturePath);
     }
 
     Actor::~Actor() {
-        LOG("Destroying Actor");
     }
 
     void Actor::BeginPlayInternal() {
@@ -29,7 +30,6 @@ namespace ly {
     }
 
     void Actor::BeginPlay() {
-        LOG("Actor began the game!");
     }
 
     void Actor::TickInternal(float deltaTime) {
@@ -158,16 +158,26 @@ namespace ly {
 
     void Actor::OnActionBeginOverlap(Actor *other) {
 
-        LOG("Overlap");
     }
 
     void Actor::OnActionEndOverlap(Actor *other) {
-        LOG("Overlap finish");
+
     }
 
     void Actor::Destroy() {
         UnInitializePhysics();
         Object::Destroy();
+    }
+
+    bool Actor::IsOtherHostile(Actor *other) const {
+        if(GetTeamId() == other->GetTeamId() || other->GetTeamId() == GetNeturalTeamId()) {
+            return false;
+        }
+        return true;
+    }
+
+    void Actor::ApplayDamage(float amount) {
+
     }
 
 }

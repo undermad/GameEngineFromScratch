@@ -19,5 +19,5 @@ Call Stack (most recent call first):
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Configuring done (1.0s)
--- Generating done (0.2s)
+-- Generating done (0.1s)
 -- Build files have been written to: D:/Programming/C++/GameEngineFromScratch/cmake-build-release

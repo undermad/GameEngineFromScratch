@@ -14,8 +14,7 @@ namespace ly {
               mTexture(),
               mPhysicBody(nullptr),
               mPhysicsEnabled(false),
-              mTeamId(GetNeturalTeamId())
-              {
+              mTeamId(GetNeturalTeamId()) {
         SetTexture(texturePath);
     }
 
@@ -30,6 +29,7 @@ namespace ly {
     }
 
     void Actor::BeginPlay() {
+
     }
 
     void Actor::TickInternal(float deltaTime) {
@@ -105,7 +105,7 @@ namespace ly {
         return mOwningWorld->GetWindowSize();
     }
 
-    bool Actor::IsActorOutOfWindowBounds() const {
+    bool Actor::IsActorOutOfWindowBounds(float allowance) const {
         float windowWidth = GetWindowSize().x;
         float windowHeight = GetWindowSize().y;
 
@@ -114,8 +114,8 @@ namespace ly {
 
         sf::Vector2f actorPosition = GetActorLocation();
 
-        if (actorPosition.x<-objectWidth || actorPosition.x>(windowWidth + objectWidth)) return true;
-        if (actorPosition.y<-objectHeight || actorPosition.y>(windowHeight + objectHeight)) return true;
+        if (actorPosition.x<-objectWidth - allowance || actorPosition.x>(windowWidth + objectWidth + allowance)) return true;
+        if (actorPosition.y<-objectHeight - allowance || actorPosition.y>(windowHeight + objectHeight + allowance)) return true;
         return false;
     }
 
@@ -170,7 +170,9 @@ namespace ly {
     }
 
     bool Actor::IsOtherHostile(Actor *other) const {
-        if(GetTeamId() == other->GetTeamId() || other->GetTeamId() == GetNeturalTeamId()) {
+
+        if (other == nullptr) return false;
+        if (GetTeamId() == other->GetTeamId() || other->GetTeamId() == GetNeturalTeamId()) {
             return false;
         }
         return true;

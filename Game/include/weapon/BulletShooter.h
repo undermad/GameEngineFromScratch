@@ -8,7 +8,7 @@ namespace ly {
 
     class BulletShooter : public Shooter {
     public:
-        BulletShooter(Actor* owner, float cooldownTime = 0.5f);
+        BulletShooter(Actor* owner, float cooldownTime = 0.3f);
 
         bool IsOnCooldown() const override;
 

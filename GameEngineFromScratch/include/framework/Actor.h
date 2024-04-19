@@ -50,24 +50,34 @@ namespace ly {
 
         sf::Vector2u GetWindowSize() const;
 
-        World *GetWorld() const { return mOwningWorld; };
+        const World *GetWorld() const { return mOwningWorld; };
 
-        bool IsActorOutOfWindowBounds() const;
+        World *GetWorld() { return mOwningWorld; };
+
+
+        bool IsActorOutOfWindowBounds(float allowance = 10.f) const;
 
         sf::FloatRect GetActorGlobalBounds() const;
 
-        static uint8 GetNeturalTeamId() {return neturailTeamId; };
+        static uint8 GetNeturalTeamId() { return neturailTeamId; };
 
         void SetEnablePhysics(bool enable);
 
         void SetTeamId(uint8 teamId) { mTeamId = teamId; };
 
         virtual void ApplayDamage(float amount);
-        virtual void OnActionBeginOverlap(Actor* other);
-        virtual void OnActionEndOverlap(Actor* other);
+
+        virtual void OnActionBeginOverlap(Actor *other);
+
+        virtual void OnActionEndOverlap(Actor *other);
 
         uint8 GetTeamId() const { return mTeamId; };
-        bool IsOtherHostile(Actor* other) const;
+
+        bool IsOtherHostile(Actor *other) const;
+
+        sf::Sprite &GetSprite() { return mSprite; };
+
+        const sf::Sprite &GetSprite() const { return mSprite; };
 
         void Destroy() override;
 

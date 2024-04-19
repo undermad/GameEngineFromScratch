@@ -6,7 +6,7 @@ namespace ly {
 
     class Bullet : public Actor {
     public:
-        Bullet(World* owningWorld, Actor* owner, const std::string& texturePath, float speed = 1000, float damage = 10);
+        Bullet(World* owningWorld, Actor* owner, const std::string& texturePath, float speed = 1000, float damage = 60);
 
         void SetSpeed(float speed) { mSpeed = speed; };
         void SetDamage(float damage) { mDamage = damage; };

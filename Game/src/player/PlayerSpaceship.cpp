@@ -12,7 +12,7 @@ namespace ly {
               mSpeed(200),
               mRotationValue(0),
               mRotationSpeed(400),
-              mBulletShooter(new BulletShooter(this, 0.3f)) {
+              mBulletShooter(new BulletShooter(this, 0.2f)) {
         SetTeamId(1);
     }
 

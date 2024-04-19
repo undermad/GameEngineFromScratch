@@ -13,6 +13,12 @@ add_executable(${GAME}
         include/weapon/Bullet.h
         src/gameplay/HealthComponent.cpp
         include/gameplay/HealthComponent.h
+        src/VFX/Explosion.cpp
+        include/VFX/Explosion.h
+        src/enemy/EnemySpaceship.cpp
+        include/enemy/EnemySpaceship.h
+        src/enemy/Vanguard.cpp
+        include/enemy/Vanguard.h
 )
 
 target_include_directories(${GAME} PUBLIC

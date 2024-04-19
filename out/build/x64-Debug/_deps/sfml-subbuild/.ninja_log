@@ -1,0 +1,21 @@
+# ninja log v5
+1	34	7348269346187090	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	e19a045ddde5303
+1	34	7348269346187090	D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	e19a045ddde5303
+34	5496	7348269400807018	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	d528ccaaf4b1841d
+34	5496	7348269400807018	D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	d528ccaaf4b1841d
+5496	5578	0	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	1c3a36393404fb3
+5496	5578	0	D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	1c3a36393404fb3
+5578	5609	7348269401938792	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	5dd6ac43bc999cc9
+5578	5609	7348269401938792	D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	5dd6ac43bc999cc9
+5609	5640	7348269402251566	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	6aa9a16da39fb6e
+5609	5640	7348269402251566	D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	6aa9a16da39fb6e
+5640	5670	7348269402553760	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	ab86be7860772b1e
+5640	5670	7348269402553760	D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	ab86be7860772b1e
+5670	5700	7348269402850356	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	7277fdff0920d422
+5670	5700	7348269402850356	D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	7277fdff0920d422
+5700	5731	7348269403156975	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	9a3ae58b128e9b6d
+5700	5731	7348269403156975	D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	9a3ae58b128e9b6d
+5731	5786	7348269403704944	CMakeFiles/sfml-populate-complete	210cc743c3a370b6
+5731	5786	7348269403704944	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	210cc743c3a370b6
+5731	5786	7348269403704944	D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	210cc743c3a370b6
+5731	5786	7348269403704944	D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	210cc743c3a370b6

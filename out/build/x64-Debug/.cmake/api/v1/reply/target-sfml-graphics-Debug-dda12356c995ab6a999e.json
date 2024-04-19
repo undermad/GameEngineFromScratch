@@ -5,7 +5,7 @@
 			"path" : "_deps/sfml-build/lib/sfml-graphics-d-2.dll"
 		},
 		{
-			"path" : "_deps/sfml-build/lib/libsfml-graphics-d.a"
+			"path" : "_deps/sfml-build/lib/sfml-graphics-d.lib"
 		},
 		{
 			"path" : "_deps/sfml-build/lib/sfml-graphics-d.pdb"
@@ -22,13 +22,15 @@
 			"target_link_libraries",
 			"sfml_find_package",
 			"target_compile_definitions",
+			"add_definitions",
 			"target_include_directories"
 		],
 		"files" : 
 		[
-			"cmake-build-debug/_deps/sfml-src/cmake/Macros.cmake",
-			"cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/CMakeLists.txt",
-			"cmake-build-debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt"
+			"out/build/x64-Debug/_deps/sfml-src/cmake/Macros.cmake",
+			"out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/CMakeLists.txt",
+			"out/build/x64-Debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt",
+			"out/build/x64-Debug/_deps/sfml-src/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -105,13 +107,22 @@
 				"parent" : 0
 			},
 			{
+				"file" : 3
+			},
+			{
 				"command" : 6,
+				"file" : 3,
+				"line" : 205,
+				"parent" : 13
+			},
+			{
+				"command" : 7,
 				"file" : 0,
 				"line" : 168,
 				"parent" : 1
 			},
 			{
-				"command" : 6,
+				"command" : 7,
 				"file" : 1,
 				"line" : 100,
 				"parent" : 0
@@ -130,7 +141,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=c++17 -fdiagnostics-color=always"
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi"
 				}
 			],
 			"defines" : 
@@ -141,25 +152,33 @@
 				{
 					"backtrace" : 12,
 					"define" : "STBI_FAILURE_USERMSG"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "_CRT_SECURE_NO_DEPRECATE"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "_SCL_SECURE_NO_WARNINGS"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 13,
-					"path" : "D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-src/include"
-				},
-				{
-					"backtrace" : 13,
-					"path" : "D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-src/src"
-				},
-				{
-					"backtrace" : 14,
-					"path" : "D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-src/extlibs/headers/stb_image"
+					"backtrace" : 15,
+					"path" : "D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-src/include"
 				},
 				{
 					"backtrace" : 15,
-					"path" : "D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-src/extlibs/headers/freetype2"
+					"path" : "D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-src/src"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-src/extlibs/headers/stb_image"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "D:/Programming/C++/GameEngineFromScratch/out/build/x64-Debug/_deps/sfml-src/extlibs/headers/freetype2"
 				}
 			],
 			"language" : "CXX",
@@ -180,6 +199,7 @@
 				11,
 				14,
 				15,
+				17,
 				22,
 				24,
 				26,
@@ -203,59 +223,6 @@
 				63,
 				65,
 				67
-			]
-		},
-		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-g -std=c++17 -fdiagnostics-color=always"
-				},
-				{
-					"fragment" : "-fno-strict-aliasing"
-				}
-			],
-			"defines" : 
-			[
-				{
-					"define" : "SFML_GRAPHICS_EXPORTS"
-				},
-				{
-					"backtrace" : 12,
-					"define" : "STBI_FAILURE_USERMSG"
-				}
-			],
-			"includes" : 
-			[
-				{
-					"backtrace" : 13,
-					"path" : "D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-src/include"
-				},
-				{
-					"backtrace" : 13,
-					"path" : "D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-src/src"
-				},
-				{
-					"backtrace" : 14,
-					"path" : "D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-src/extlibs/headers/stb_image"
-				},
-				{
-					"backtrace" : 15,
-					"path" : "D:/Programming/C++/GameEngineFromScratch/cmake-build-debug/_deps/sfml-src/extlibs/headers/freetype2"
-				}
-			],
-			"language" : "CXX",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					2
-				],
-				"standard" : "17"
-			},
-			"sourceIndexes" : 
-			[
-				17
 			]
 		}
 	],
@@ -290,7 +257,7 @@
 		],
 		"prefix" : 
 		{
-			"path" : "C:/Program Files (x86)/GameEngineFromScratch"
+			"path" : "D:/Programming/C++/GameEngineFromScratch/out/install/x64-Debug"
 		}
 	},
 	"link" : 
@@ -298,36 +265,36 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "",
+				"fragment" : "/machine:x64 /debug /INCREMENTAL",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "_deps\\sfml-build\\lib\\libsfml-window-d.a",
+				"fragment" : "_deps\\sfml-build\\lib\\sfml-window-d.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 6,
-				"fragment" : "_deps\\sfml-build\\lib\\libsfml-system-d.a",
+				"fragment" : "_deps\\sfml-build\\lib\\sfml-system-d.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 8,
-				"fragment" : "-lopengl32",
+				"fragment" : "opengl32.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 9,
-				"fragment" : "-lglu32",
+				"fragment" : "glu32.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 11,
-				"fragment" : "_deps\\sfml-src\\extlibs\\libs-mingw\\x64\\libfreetype.a",
+				"fragment" : "_deps\\sfml-src\\extlibs\\libs-msvc-universal\\x64\\freetype.lib",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
 				"role" : "libraries"
 			}
 		],
@@ -338,7 +305,7 @@
 	"paths" : 
 	{
 		"build" : "_deps/sfml-build/src/SFML/Graphics",
-		"source" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics"
+		"source" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics"
 	},
 	"sourceGroups" : 
 	[
@@ -435,377 +402,377 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/BlendMode.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/BlendMode.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/BlendMode.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Color.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Color.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Export.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/BlendMode.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Font.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Color.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Font.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Color.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Glsl.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Glsl.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Glsl.inl",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Glyph.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Export.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/GLCheck.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Font.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/GLCheck.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/GLExtensions.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Font.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/GLExtensions.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Glsl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Glsl.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Glsl.inl",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Glyph.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Image.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/GLCheck.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Image.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/GLCheck.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/ImageLoader.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/ImageLoader.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/PrimitiveType.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Rect.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Rect.inl",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/GLExtensions.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RenderStates.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/RenderStates.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/GLExtensions.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RenderTexture.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Image.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/RenderTexture.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RenderTarget.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/RenderTarget.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Image.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RenderWindow.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/ImageLoader.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/RenderWindow.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/ImageLoader.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Shader.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/PrimitiveType.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Shader.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Rect.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Texture.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Texture.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Rect.inl",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/TextureSaver.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RenderStates.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/TextureSaver.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Transform.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Transform.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/RenderStates.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Transformable.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RenderTexture.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Transformable.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/View.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/View.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/RenderTexture.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Vertex.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RenderTarget.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Vertex.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/RenderTarget.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/GLLoader.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RenderWindow.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/GLLoader.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/RenderWindow.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Drawable.hpp",
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Shader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Shader.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Texture.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Texture.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/TextureSaver.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/TextureSaver.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Transform.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Transform.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Transformable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Transformable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/View.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/View.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Vertex.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Vertex.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/GLLoader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/GLLoader.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Drawable.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Shape.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Shape.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Shape.hpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/CircleShape.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/CircleShape.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Shape.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RectangleShape.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/CircleShape.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/RectangleShape.hpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/ConvexShape.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/ConvexShape.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/CircleShape.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Sprite.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RectangleShape.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Sprite.hpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/Text.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/Text.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/RectangleShape.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/VertexArray.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/ConvexShape.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/VertexArray.hpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/VertexBuffer.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/ConvexShape.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImpl.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Sprite.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Sprite.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/Text.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/Text.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/VertexArray.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/VertexArray.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/VertexBuffer.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImpl.cpp",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImpl.hpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplFBO.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplFBO.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImpl.hpp",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplDefault.cpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplFBO.cpp",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 2,
-			"path" : "cmake-build-debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplDefault.hpp",
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplFBO.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplDefault.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplDefault.hpp",
 			"sourceGroupIndex" : 2
 		}
 	],

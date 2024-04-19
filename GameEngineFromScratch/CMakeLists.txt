@@ -19,6 +19,8 @@ add_library(${GAME_ENGINE_FROM_SCRATCH} STATIC
         include/framework/Physics.h
         src/framework/Delegate.cpp
         include/framework/Delegate.h
+        src/VFX/Particle.cpp
+        include/VFX/Particle.h
 )
 
 target_include_directories(${GAME_ENGINE_FROM_SCRATCH} PUBLIC
